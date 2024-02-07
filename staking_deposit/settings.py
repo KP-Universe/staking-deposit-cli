@@ -33,11 +33,15 @@ SepoliaSetting = BaseChainSetting(
 ZhejiangSetting = BaseChainSetting(
     NETWORK_NAME=ZHEJIANG, GENESIS_FORK_VERSION=bytes.fromhex('00000069'),
     GENESIS_VALIDATORS_ROOT=bytes.fromhex('53a92d8f2bb1d85f62d16a156e6ebcd1bcaba652d0900b2c2f387826f3481f6f'))
+# 수정 시작 지점
 # Holesky setting
 HoleskySetting = BaseChainSetting(
-    NETWORK_NAME=HOLESKY, GENESIS_FORK_VERSION=bytes.fromhex('01017000'),
-    GENESIS_VALIDATORS_ROOT=bytes.fromhex('9143aa7c615a7f7115e2b6aac319c03529df8242ae705fba9df39b79c59fa8b1'))
-
+    NETWORK_NAME=HOLESKY, GENESIS_FORK_VERSION=bytes.fromhex('20000089'),
+    GENESIS_VALIDATORS_ROOT=bytes.fromhex('83431ec7fcf92cfc44947fc0418e831c25e1d0806590231c439830db7ad54fda'))
+# HoleskySetting = BaseChainSetting(
+#     NETWORK_NAME=HOLESKY, GENESIS_FORK_VERSION=bytes.fromhex('01017000'),
+#     GENESIS_VALIDATORS_ROOT=bytes.fromhex('9143aa7c615a7f7115e2b6aac319c03529df8242ae705fba9df39b79c59fa8b1'))
+# 수정 종료 지점
 
 ALL_CHAINS: Dict[str, BaseChainSetting] = {
     MAINNET: MainnetSetting,
