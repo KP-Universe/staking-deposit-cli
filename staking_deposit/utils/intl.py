@@ -1,5 +1,6 @@
 import inspect
 import difflib
+import logging # 수정 지점
 from functools import reduce
 import json
 from typing import (
@@ -82,7 +83,11 @@ def get_first_options(options: Mapping[str, Sequence[str]]) -> List[str]:
 
 
 def closest_match(text: str, options: Iterable[str]) -> str:
-    print("closest_match(text: str, options: Iterable[str]) EXECUTE!!!")
+    # 수정 시작 지점
+    logger = logging.getLogger()
+    logger.setLevel(logging.INFO)
+    logger.info("closest_match(text: str, options: Iterable[str]) EXECUTE!!!")
+    # 수정 종료 지점
     '''
     Finds the closest match to `text` in the `options_list`
     '''
