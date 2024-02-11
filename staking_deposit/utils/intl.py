@@ -82,6 +82,7 @@ def get_first_options(options: Mapping[str, Sequence[str]]) -> List[str]:
 
 
 def closest_match(text: str, options: Iterable[str]) -> str:
+    print("closest_match(text: str, options: Iterable[str]) EXECUTE!!!")
     '''
     Finds the closest match to `text` in the `options_list`
     '''
